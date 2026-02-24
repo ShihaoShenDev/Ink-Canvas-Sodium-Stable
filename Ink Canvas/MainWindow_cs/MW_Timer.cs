@@ -247,7 +247,7 @@ namespace Ink_Canvas {
                            ForegroundWindowInfo.WindowRect().Width >= SystemParameters.WorkArea.Width - 16) {
                     if (!unfoldFloatingBarByUser && !isFloatingBarFolded) FoldFloatingBar_MouseUp(null, null);
                     // MSWhiteboard
-                } else if (Settings.Automation.IsAutoFoldInMSWhiteboard && (windowProcessName == "MicrosoftWhiteboard" || 
+                } else if (Settings.Automation.IsAutoFoldInMSWhiteboard && (windowProcessName == "MicrosoftWhiteboard" ||
                                                                             windowProcessName == "msedgewebview2")) {
                     if (!unfoldFloatingBarByUser && !isFloatingBarFolded) FoldFloatingBar_MouseUp(null, null);
                     // OldZyBoard

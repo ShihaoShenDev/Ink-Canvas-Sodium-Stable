@@ -26,7 +26,7 @@ namespace Ink_Canvas {
         public static Slides slides = null;
         public static Slide slide = null;
         public static int slidescount = 0;
-        
+
         // Helper method for getting COM object by progId (compatible with .NET Core)
         // Note: In .NET Core/5+/6+/8, Marshal.GetActiveObject is not available
         // This is a simplified stub - actual implementation may need runtime-specific handling
@@ -630,7 +630,7 @@ namespace Ink_Canvas {
                 ViewBoxStackPanelMain.Margin = new Thickness(10, 10, 10, 55);
 
                 if (currentMode != 0) {
-                    
+
                     //GridBackgroundCover.Visibility = Visibility.Collapsed;
                     //AnimationsHelper.HideWithSlideAndFade(BlackboardLeftSide);
                     //AnimationsHelper.HideWithSlideAndFade(BlackboardCenterSide);

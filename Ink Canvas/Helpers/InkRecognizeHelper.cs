@@ -14,7 +14,7 @@ namespace Ink_Canvas.Helpers
         {
             if (strokes == null || strokes.Count == 0)
                 return default;
-            
+
             // Return default result - shape recognition needs reimplementation
             // The InkAnalyzer types (AnalysisAlternate, InkDrawingNode) are not available in .NET Core
             return default;
@@ -46,7 +46,7 @@ namespace Ink_Canvas.Helpers
     public class ShapeRecognizeResult
     {
         public ShapeRecognizeResult() { }
-        
+
         // Stub properties - actual shape recognition needs reimplementation
         // Using dynamic to allow GetShapeName() calls
         public dynamic? InkDrawingNode { get; set; }

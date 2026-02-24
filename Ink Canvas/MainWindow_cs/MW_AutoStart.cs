@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace Ink_Canvas {
     public partial class MainWindow : Window {
-        
+
         [ComImport]
         [Guid("00021401-0000-0000-C000-000000000046")]
         private class ShellLink { }
@@ -51,22 +51,22 @@ namespace Ink_Canvas {
             try {
                 string startupPath = Environment.GetFolderPath(Environment.SpecialFolder.Startup);
                 string shortcutPath = Path.Combine(startupPath, exeName + ".lnk");
-                
+
                 // Get the executable path
-                string exePath = System.Diagnostics.Process.GetCurrentProcess().MainModule?.FileName 
+                string exePath = System.Diagnostics.Process.GetCurrentProcess().MainModule?.FileName
                     ?? System.Windows.Forms.Application.ExecutablePath;
-                
+
                 // Create shell link
                 IShellLinkW shellLink = (IShellLinkW)new ShellLink();
                 shellLink.SetPath(exePath);
                 shellLink.SetWorkingDirectory(Path.GetDirectoryName(exePath) ?? Environment.CurrentDirectory);
                 shellLink.SetDescription(exeName + "_Ink");
                 shellLink.SetShowCmd(1); // SW_SHOWNORMAL
-                
+
                 // Save the shortcut
                 IPersistFile persistFile = (IPersistFile)shellLink;
                 persistFile.Save(shortcutPath, true);
-                
+
                 return true;
             }
             catch (Exception) { }
