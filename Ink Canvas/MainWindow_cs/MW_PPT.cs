@@ -1,6 +1,7 @@
 ﻿using Ink_Canvas.Helpers;
 using Microsoft.Office.Interop.PowerPoint;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -26,10 +27,27 @@ namespace Ink_Canvas {
         public static Slide slide = null;
         public static int slidescount = 0;
 
+        // Helper method for getting COM object by progId (compatible with .NET Core)
+        // Note: In .NET Core/5+/6+/8, Marshal.GetActiveObject is not available
+        // This is a simplified stub - actual implementation may need runtime-specific handling
+        private static object? GetActiveObject(string progId) {
+            try {
+                // Try to find process and get COM object from it
+                var processName = progId.Contains("kwpp") ? "wpp" : "POWERPNT";
+                var processes = Process.GetProcessesByName(processName);
+                if (processes.Length > 0) {
+                    // Return null as placeholder - actual COM interop requires additional work
+                    return null;
+                }
+            }
+            catch { }
+            return null;
+        }
+
         private void BtnCheckPPT_Click(object sender, RoutedEventArgs e) {
             try {
                 pptApplication =
-                    (Microsoft.Office.Interop.PowerPoint.Application)Marshal.GetActiveObject("kwpp.Application");
+                    (Microsoft.Office.Interop.PowerPoint.Application)GetActiveObject("kwpp.Application");
                 //pptApplication.SlideShowWindows[1].View.Next();
                 if (pptApplication != null) {
                     //获得演示文稿对象
@@ -96,7 +114,7 @@ namespace Ink_Canvas {
                 //ConfigHelper.Instance.IsInitApplicationSuccessful = true;
 
                 pptApplication =
-                    (Microsoft.Office.Interop.PowerPoint.Application)Marshal.GetActiveObject("PowerPoint.Application");
+                    (Microsoft.Office.Interop.PowerPoint.Application)GetActiveObject("PowerPoint.Application");
 
                 if (pptApplication != null) {
                     timerCheckPPT.Stop();
@@ -612,7 +630,7 @@ namespace Ink_Canvas {
                 ViewBoxStackPanelMain.Margin = new Thickness(10, 10, 10, 55);
 
                 if (currentMode != 0) {
-                    
+
                     //GridBackgroundCover.Visibility = Visibility.Collapsed;
                     //AnimationsHelper.HideWithSlideAndFade(BlackboardLeftSide);
                     //AnimationsHelper.HideWithSlideAndFade(BlackboardCenterSide);

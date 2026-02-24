@@ -5,6 +5,18 @@
 > [!IMPORTANT]
 > GitHub 上的`icc-0610fix`原始存储库已被删除。永久存档在[这里](https://github.com/LiuYan-xwx/icc-0610fix/tree/e263bc9b357a2bfca300855c86c66b5b9f41f4be)。
 
+## 介绍
+
+使用~~极为先进的刀特奈特十一~~ `.NET 11` 构建的 InkCanvasForClass 的现代化版本，[ICS](https://github.com/ShihaoShenDev/Ink-Canvas-Sodium) 的稳定分支。
+
+## 已知问题
+
+- 无法与 PowerPoint 联动。
+- 无法使用形状识别功能。
+- 足足 902 个 `Warning`。
+
+---
+
 以下是原始 ReadMe：（已翻译为简中并注释失效内容）
 
 ---
