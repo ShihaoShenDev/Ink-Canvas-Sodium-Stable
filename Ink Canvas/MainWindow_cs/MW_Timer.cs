@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Timers;
 using System.Windows;
 using MessageBox = System.Windows.MessageBox;
+using Timer = System.Timers.Timer;
 
 namespace Ink_Canvas {
     public class TimeViewModel : INotifyPropertyChanged {
