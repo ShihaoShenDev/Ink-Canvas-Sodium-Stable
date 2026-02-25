@@ -144,7 +144,7 @@ namespace Ink_Canvas
         [JsonProperty("isShowQuickPanel")]
         public bool IsShowQuickPanel { get; set; } = true;
         [JsonProperty("chickenSoupSource")]
-        public int ChickenSoupSource { get; set; } = 1;
+        public int ChickenSoupSource { get; set; } = 0;
         [JsonProperty("isShowModeFingerToggleSwitch")]
         public bool IsShowModeFingerToggleSwitch { get; set; } = true;
         [JsonProperty("theme")]

@@ -1,4 +1,4 @@
-﻿using Ink_Canvas.Helpers;
+using Ink_Canvas.Helpers;
 using Newtonsoft.Json;
 using System;
 using System.Diagnostics;
@@ -204,12 +204,9 @@ namespace Ink_Canvas {
             Settings.Appearance.ChickenSoupSource = ComboBoxChickenSoupSource.SelectedIndex;
             SaveSettingsToFile();
             if (Settings.Appearance.ChickenSoupSource == 0) {
-                int randChickenSoupIndex = new Random().Next(ChickenSoup.OSUPlayerYuLu.Length);
-                BlackBoardWaterMark.Text = ChickenSoup.OSUPlayerYuLu[randChickenSoupIndex];
-            } else if (Settings.Appearance.ChickenSoupSource == 1) {
                 int randChickenSoupIndex = new Random().Next(ChickenSoup.MingYanJingJu.Length);
                 BlackBoardWaterMark.Text = ChickenSoup.MingYanJingJu[randChickenSoupIndex];
-            } else if (Settings.Appearance.ChickenSoupSource == 2) {
+            } else if (Settings.Appearance.ChickenSoupSource == 1) {
                 int randChickenSoupIndex = new Random().Next(ChickenSoup.GaoKaoPhrases.Length);
                 BlackBoardWaterMark.Text = ChickenSoup.GaoKaoPhrases[randChickenSoupIndex];
             }

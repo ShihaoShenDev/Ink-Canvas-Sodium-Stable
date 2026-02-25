@@ -1,4 +1,4 @@
-﻿using Ink_Canvas.Helpers;
+using Ink_Canvas.Helpers;
 using iNKORE.UI.WPF.Modern;
 using System;
 using System.Diagnostics;
@@ -25,8 +25,8 @@ namespace Ink_Canvas {
             WaterMarkTime.Visibility = Visibility.Collapsed;
             WaterMarkDate.Visibility = Visibility.Collapsed;
             BlackBoardWaterMark.Visibility = Visibility.Collapsed;
-            ICCWaterMarkDark.Visibility = Visibility.Collapsed;
-            ICCWaterMarkWhite.Visibility = Visibility.Collapsed;
+            //ICCWaterMarkDark.Visibility = Visibility.Collapsed;
+            //ICCWaterMarkWhite.Visibility = Visibility.Collapsed;
             BtnSwitch_Click(BtnSwitch, null);
             BtnExit.Foreground = Brushes.White;
             ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;

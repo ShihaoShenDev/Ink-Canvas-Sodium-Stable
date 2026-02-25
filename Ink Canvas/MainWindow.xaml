@@ -572,9 +572,8 @@
                                         <TextBlock Foreground="#fafafa" Text="信仰の源出自Where？" VerticalAlignment="Center"
                                                    FontSize="14" Margin="0,0,16,0" />
                                         <ComboBox Name="ComboBoxChickenSoupSource" FontFamily="Microsoft YaHei UI"
-                                                  SelectedIndex="1"
+                                                  SelectedIndex="0"
                                                   SelectionChanged="ComboBoxChickenSoupSource_SelectionChanged">
-                                            <ComboBoxItem Content="osu!玩家语录" FontFamily="Microsoft YaHei UI" />
                                             <ComboBoxItem Content="励志立志的名言警句" FontFamily="Microsoft YaHei UI" />
                                             <ComboBoxItem Content="高考祝福语" FontFamily="Microsoft YaHei UI" />
                                         </ComboBox>
@@ -2244,10 +2243,10 @@
         <!--// 黑/白 板幕布 //-->
         <Grid Name="GridBackgroundCoverHolder">
             <Grid Name="GridBackgroundCover" Visibility="Collapsed" Background="#1F1F1F">
-                <Image Name="ICCWaterMarkWhite" Source="Resources/Icons-png/icc-transparent.png" Width="648"
+                <!-- <Image Name="ICCWaterMarkWhite" Source="Resources/Icons-png/icc-transparent.png" Width="648"
                        Height="648" Opacity="0.035" />
                 <Image Name="ICCWaterMarkDark" Source="Resources/Icons-png/icc-transparent-dark.png" Width="648"
-                       Height="648" Opacity="0.055" />
+                       Height="648" Opacity="0.055" /> -->
             </Grid>
         </Grid>
         <Grid Name="GridTransparencyFakeBackground" Opacity="0" />

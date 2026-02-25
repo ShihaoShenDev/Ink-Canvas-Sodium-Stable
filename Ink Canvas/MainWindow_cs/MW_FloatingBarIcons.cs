@@ -1,4 +1,4 @@
-﻿using Ink_Canvas.Helpers;
+using Ink_Canvas.Helpers;
 using System;
 using System.Threading.Tasks;
 using System.Windows;
@@ -539,25 +539,22 @@ namespace Ink_Canvas {
                 }
 
                 if (Settings.Appearance.ChickenSoupSource == 0) {
-                    int randChickenSoupIndex = new Random().Next(ChickenSoup.OSUPlayerYuLu.Length);
-                    BlackBoardWaterMark.Text = ChickenSoup.OSUPlayerYuLu[randChickenSoupIndex];
-                } else if (Settings.Appearance.ChickenSoupSource == 1) {
                     int randChickenSoupIndex = new Random().Next(ChickenSoup.MingYanJingJu.Length);
                     BlackBoardWaterMark.Text = ChickenSoup.MingYanJingJu[randChickenSoupIndex];
-                } else if (Settings.Appearance.ChickenSoupSource == 2) {
+                } else if (Settings.Appearance.ChickenSoupSource == 1) {
                     int randChickenSoupIndex = new Random().Next(ChickenSoup.GaoKaoPhrases.Length);
                     BlackBoardWaterMark.Text = ChickenSoup.GaoKaoPhrases[randChickenSoupIndex];
                 }
 
                 if (Settings.Canvas.UsingWhiteboard)
                 {
-                    ICCWaterMarkDark.Visibility = Visibility.Visible;
-                    ICCWaterMarkWhite.Visibility = Visibility.Collapsed;
+                    //ICCWaterMarkDark.Visibility = Visibility.Visible;
+                    //ICCWaterMarkWhite.Visibility = Visibility.Collapsed;
                 }
                 else
                 {
-                    ICCWaterMarkWhite.Visibility = Visibility.Visible;
-                    ICCWaterMarkDark.Visibility = Visibility.Collapsed;
+                    //ICCWaterMarkWhite.Visibility = Visibility.Visible;
+                    //ICCWaterMarkDark.Visibility = Visibility.Collapsed;
                 }
             }
             else
@@ -598,8 +595,8 @@ namespace Ink_Canvas {
                 WaterMarkTime.Visibility = Visibility.Collapsed;
                 WaterMarkDate.Visibility = Visibility.Collapsed;
                 BlackBoardWaterMark.Visibility = Visibility.Collapsed;
-                ICCWaterMarkDark.Visibility = Visibility.Collapsed;
-                ICCWaterMarkWhite.Visibility = Visibility.Collapsed;
+                //ICCWaterMarkDark.Visibility = Visibility.Collapsed;
+                //ICCWaterMarkWhite.Visibility = Visibility.Collapsed;
             }
 
             BtnSwitch_Click(BtnSwitch, null);

@@ -167,6 +167,9 @@ namespace Ink_Canvas {
                 }
 
                 ComboBoxChickenSoupSource.SelectedIndex = Settings.Appearance.ChickenSoupSource;
+                // 确保索引在有效范围内
+                if (ComboBoxChickenSoupSource.SelectedIndex >= ComboBoxChickenSoupSource.Items.Count)
+                    ComboBoxChickenSoupSource.SelectedIndex = 0;
 
                 ToggleSwitchEnableQuickPanel.IsOn = Settings.Appearance.IsShowQuickPanel;
 
