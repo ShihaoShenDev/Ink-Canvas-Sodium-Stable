@@ -397,10 +397,13 @@
                                                FontSize="26" />
                                 </GroupBox.Header>
                                 <ui:SimpleStackPanel Spacing="6">
+                                    <TextBlock Text="由于相关库在 .NET 11 下不可用，故所有墨迹纠正相关功能暂不可用。" Foreground="#ff0000" />
+                                    <TextBlock Text="建议使用几何功能。（如果你能看到这行，说明你的系统环境不正常）" Foreground="#aaaaaa"/>
+                                    <!-- 不对头啊，怎么我的电脑上这一块死活不出现啊 -->
                                     <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                         <TextBlock Foreground="#fafafa" Text="启用墨迹识别" VerticalAlignment="Center"
                                                    FontSize="14" Margin="0,0,16,0" />
-                                        <ui:ToggleSwitch OnContent="" OffContent="" Name="ToggleSwitchEnableInkToShape"
+                                        <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent="" Name="ToggleSwitchEnableInkToShape"
                                                          IsOn="True" FontFamily="Microsoft YaHei UI" FontWeight="Bold"
                                                          Toggled="ToggleSwitchEnableInkToShape_Toggled" />
                                     </ui:SimpleStackPanel>
@@ -409,7 +412,7 @@
                                         <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                             <TextBlock Foreground="#fafafa" Text="阻止矫正后的矩形带有模拟压感值"
                                                        VerticalAlignment="Center" FontSize="14" Margin="0,0,16,0" />
-                                            <ui:ToggleSwitch OnContent="" OffContent=""
+                                            <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent=""
                                                              Name="ToggleSwitchEnableInkToShapeNoFakePressureRectangle"
                                                              IsOn="True" FontFamily="Microsoft YaHei UI"
                                                              FontWeight="Bold"
@@ -418,7 +421,7 @@
                                         <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                             <TextBlock Foreground="#fafafa" Text="阻止矫正后的三角形带有模拟压感值"
                                                        VerticalAlignment="Center" FontSize="14" Margin="0,0,16,0" />
-                                            <ui:ToggleSwitch OnContent="" OffContent=""
+                                            <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent=""
                                                              Name="ToggleSwitchEnableInkToShapeNoFakePressureTriangle"
                                                              IsOn="True" FontFamily="Microsoft YaHei UI"
                                                              FontWeight="Bold"
@@ -427,7 +430,7 @@
                                         <Line HorizontalAlignment="Center" X1="0" Y1="0" X2="400" Y2="0"
                                               Stroke="#3f3f46" StrokeThickness="1" Margin="0,4,0,4" />
                                         <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                                            <CheckBox IsChecked="True" Name="ToggleCheckboxEnableInkToShapeTriangle"
+                                            <CheckBox IsEnabled="False" IsChecked="True" Name="ToggleCheckboxEnableInkToShapeTriangle"
                                                       Checked="ToggleCheckboxEnableInkToShapeTriangle_CheckedChanged"
                                                       Unchecked="ToggleCheckboxEnableInkToShapeTriangle_CheckedChanged">
                                                 <CheckBox.Content>
@@ -438,7 +441,7 @@
                                             </CheckBox>
                                         </ui:SimpleStackPanel>
                                         <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                                            <CheckBox IsChecked="True" Name="ToggleCheckboxEnableInkToShapeRectangle"
+                                            <CheckBox IsEnabled="False" IsChecked="True" Name="ToggleCheckboxEnableInkToShapeRectangle"
                                                       Checked="ToggleCheckboxEnableInkToShapeRectangle_CheckedChanged"
                                                       Unchecked="ToggleCheckboxEnableInkToShapeRectangle_CheckedChanged">
                                                 <CheckBox.Content>
@@ -449,7 +452,7 @@
                                             </CheckBox>
                                         </ui:SimpleStackPanel>
                                         <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                                            <CheckBox IsChecked="True" Name="ToggleCheckboxEnableInkToShapeRounded"
+                                            <CheckBox IsEnabled="False" IsChecked="True" Name="ToggleCheckboxEnableInkToShapeRounded"
                                                       Checked="ToggleCheckboxEnableInkToShapeRounded_CheckedChanged"
                                                       Unchecked="ToggleCheckboxEnableInkToShapeRounded_CheckedChanged">
                                                 <CheckBox.Content>
@@ -460,7 +463,6 @@
                                             </CheckBox>
                                         </ui:SimpleStackPanel>
                                     </ui:SimpleStackPanel>
-
                                 </ui:SimpleStackPanel>
                             </GroupBox>
                             <GroupBox Name="GroupBoxAppearanceNewUI">
@@ -649,13 +651,15 @@
                                                FontSize="26" />
                                 </GroupBox.Header>
                                 <ui:SimpleStackPanel Spacing="6">
+                                    <TextBlock Text="由于相关库在 .NET 11 下不可用，故所有 PPT 相关功能暂不可用。" Foreground="#ff0000" />
+                                    <TextBlock Text="现阶段建议搭配“希沃课堂助手”使用，并保持软件的隐藏状态。" Foreground="#aaaaaa"/>
                                     <TextBlock Text="此部分的设置项将会在幻灯片播放时使用，优先级高于其他设置项" Foreground="#a1a1aa" />
                                     <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                         <Image Source="/Resources/Icons-png/Powerpoint.png" Margin="0,0,6,0" Width="28"
                                                Height="28" VerticalAlignment="Center" />
                                         <TextBlock Foreground="#fafafa" Text="Microsoft PowerPoint 支持"
                                                    VerticalAlignment="Center" FontSize="14" Margin="0,0,16,0" />
-                                        <ui:ToggleSwitch OnContent="" OffContent=""
+                                        <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent=""
                                                          Name="ToggleSwitchSupportPowerPoint" IsOn="True"
                                                          FontFamily="Microsoft YaHei UI" FontWeight="Bold"
                                                          Toggled="ToggleSwitchSupportPowerPoint_Toggled" />
@@ -665,7 +669,7 @@
                                                Height="28" VerticalAlignment="Center" />
                                         <TextBlock Foreground="#fafafa" Text="WPS 支持" VerticalAlignment="Center"
                                                    FontSize="14" Margin="0,0,16,0" />
-                                        <ui:ToggleSwitch OnContent="" OffContent="" Name="ToggleSwitchSupportWPS"
+                                        <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent="" Name="ToggleSwitchSupportWPS"
                                                          IsOn="True" FontFamily="Microsoft YaHei UI" FontWeight="Bold"
                                                          Toggled="ToggleSwitchSupportWPS_Toggled" />
                                     </ui:SimpleStackPanel>
@@ -726,7 +730,7 @@
                                     <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                         <TextBlock Foreground="#fafafa" Text="在 PPT 模式下显示翻页按钮"
                                                    VerticalAlignment="Center" FontSize="14" Margin="0,0,16,0" />
-                                        <ui:ToggleSwitch OnContent="" OffContent=""
+                                        <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent=""
                                                          Name="ToggleSwitchShowPPTButton" IsOn="True"
                                                          FontFamily="Microsoft YaHei UI" FontWeight="Bold"
                                                          Toggled="ToggleSwitchShowPPTButton_OnToggled" />
@@ -735,22 +739,22 @@
                                                          Visibility="{Binding ElementName=ToggleSwitchShowPPTButton, Path=IsOn, Converter={StaticResource BooleanToVisibilityConverter}}">
                                         <ui:SimpleStackPanel Margin="0,-4,0,4" Orientation="Horizontal"
                                                              HorizontalAlignment="Left" Spacing="16">
-                                            <CheckBox IsChecked="True" MinWidth="0" Name="CheckboxEnableLBPPTButton"
+                                            <CheckBox IsEnabled="False" IsChecked="True" MinWidth="0" Name="CheckboxEnableLBPPTButton"
                                                       Checked="CheckboxEnableLBPPTButton_IsCheckChanged"
                                                       Unchecked="CheckboxEnableLBPPTButton_IsCheckChanged">
                                                 左下
                                             </CheckBox>
-                                            <CheckBox IsChecked="True" MinWidth="0" Name="CheckboxEnableRBPPTButton"
+                                            <CheckBox IsEnabled="False" IsChecked="True" MinWidth="0" Name="CheckboxEnableRBPPTButton"
                                                       Checked="CheckboxEnableRBPPTButton_IsCheckChanged"
                                                       Unchecked="CheckboxEnableRBPPTButton_IsCheckChanged">
                                                 右下
                                             </CheckBox>
-                                            <CheckBox IsChecked="True" MinWidth="0" Name="CheckboxEnableLSPPTButton"
+                                            <CheckBox IsEnabled="False" IsChecked="True" MinWidth="0" Name="CheckboxEnableLSPPTButton"
                                                       Checked="CheckboxEnableLSPPTButton_IsCheckChanged"
                                                       Unchecked="CheckboxEnableLSPPTButton_IsCheckChanged">
                                                 左侧
                                             </CheckBox>
-                                            <CheckBox IsChecked="True" MinWidth="0" Name="CheckboxEnableRSPPTButton"
+                                            <CheckBox IsEnabled="False" IsChecked="True" MinWidth="0" Name="CheckboxEnableRSPPTButton"
                                                       Checked="CheckboxEnableRSPPTButton_IsCheckChanged"
                                                       Unchecked="CheckboxEnableRSPPTButton_IsCheckChanged">
                                                 右侧
@@ -759,13 +763,13 @@
                                         <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                             <TextBlock Foreground="#fafafa" Text="左侧偏移" VerticalAlignment="Center"
                                                        FontSize="14" Margin="0,0,12,0" />
-                                            <Slider x:Name="PPTButtonLeftPositionValueSlider" Minimum="-500"
+                                            <Slider IsEnabled="False" x:Name="PPTButtonLeftPositionValueSlider" Minimum="-500"
                                                     Maximum="500" Width="138" FontFamily="Microsoft YaHei UI"
                                                     FontSize="20" IsSnapToTickEnabled="True" Value="0"
                                                     TickFrequency="1"
                                                     TickPlacement="None" AutoToolTipPlacement="None"
                                                     ValueChanged="PPTButtonLeftPositionValueSlider_ValueChanged" />
-                                            <Button Padding="5" Margin="8,0,0,0" Name="PPTBtnLSPlusBtn"
+                                            <Button IsEnabled="False" Padding="5" Margin="8,0,0,0" Name="PPTBtnLSPlusBtn"
                                                     Click="PPTBtnLSPlusBtn_Clicked">
                                                 <Image Width="16" Height="16">
                                                     <Image.Source>
@@ -780,7 +784,7 @@
                                                     </Image.Source>
                                                 </Image>
                                             </Button>
-                                            <Button Margin="6,0,0,0" Padding="5" Name="PPTBtnLSMinusBtn"
+                                            <Button IsEnabled="False" Margin="6,0,0,0" Padding="5" Name="PPTBtnLSMinusBtn"
                                                     Click="PPTBtnLSMinusBtn_Clicked">
                                                 <Image Width="16" Height="16">
                                                     <Image.Source>
@@ -795,7 +799,7 @@
                                                     </Image.Source>
                                                 </Image>
                                             </Button>
-                                            <Button Margin="6,0,0,0" Padding="5" Name="PPTBtnLSSyncBtn"
+                                            <Button IsEnabled="False" Margin="6,0,0,0" Padding="5" Name="PPTBtnLSSyncBtn"
                                                     Click="PPTBtnLSSyncBtn_Clicked">
                                                 <Image Width="16" Height="16">
                                                     <Image.Source>
@@ -810,7 +814,7 @@
                                                     </Image.Source>
                                                 </Image>
                                             </Button>
-                                            <Button Margin="6,0,0,0" Padding="5" Name="PPTBtnLSResetBtn"
+                                            <Button IsEnabled="False" Margin="6,0,0,0" Padding="5" Name="PPTBtnLSResetBtn"
                                                     Click="PPTBtnLSResetBtn_Clicked">
                                                 <Image Width="16" Height="16">
                                                     <Image.Source>
@@ -833,13 +837,13 @@
                                         <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                             <TextBlock Foreground="#fafafa" Text="右侧偏移" VerticalAlignment="Center"
                                                        FontSize="14" Margin="0,0,12,0" />
-                                            <Slider x:Name="PPTButtonRightPositionValueSlider" Minimum="-500"
+                                            <Slider IsEnabled="False" x:Name="PPTButtonRightPositionValueSlider" Minimum="-500"
                                                     Maximum="500" Width="138" FontFamily="Microsoft YaHei UI"
                                                     FontSize="20" IsSnapToTickEnabled="True" Value="0"
                                                     TickFrequency="1"
                                                     TickPlacement="None" AutoToolTipPlacement="None"
                                                     ValueChanged="PPTButtonRightPositionValueSlider_ValueChanged" />
-                                            <Button Padding="5" Margin="8,0,0,0" Name="PPTBtnRSPlusBtn"
+                                            <Button IsEnabled="False" Padding="5" Margin="8,0,0,0" Name="PPTBtnRSPlusBtn"
                                                     Click="PPTBtnRSPlusBtn_Clicked">
                                                 <Image Width="16" Height="16">
                                                     <Image.Source>
@@ -854,7 +858,7 @@
                                                     </Image.Source>
                                                 </Image>
                                             </Button>
-                                            <Button Margin="6,0,0,0" Padding="5" Name="PPTBtnRSMinusBtn"
+                                            <Button IsEnabled="False" Margin="6,0,0,0" Padding="5" Name="PPTBtnRSMinusBtn"
                                                     Click="PPTBtnRSMinusBtn_Clicked">
                                                 <Image Width="16" Height="16">
                                                     <Image.Source>
@@ -869,7 +873,7 @@
                                                     </Image.Source>
                                                 </Image>
                                             </Button>
-                                            <Button Margin="6,0,0,0" Padding="5" Name="PPTBtnRSSyncBtn"
+                                            <Button IsEnabled="False" Margin="6,0,0,0" Padding="5" Name="PPTBtnRSSyncBtn"
                                                     Click="PPTBtnRSSyncBtn_Clicked">
                                                 <Image Width="16" Height="16">
                                                     <Image.Source>
@@ -884,7 +888,7 @@
                                                     </Image.Source>
                                                 </Image>
                                             </Button>
-                                            <Button Margin="6,0,0,0" Padding="5" Name="PPTBtnRSResetBtn"
+                                            <Button IsEnabled="False" Margin="6,0,0,0" Padding="5" Name="PPTBtnRSResetBtn"
                                                     Click="PPTBtnRSResetBtn_Clicked">
                                                 <Image Width="16" Height="16">
                                                     <Image.Source>
@@ -911,18 +915,18 @@
                                             <TextBlock Margin="0,0,24,0" Text="两侧" FontWeight="Bold"
                                                        VerticalAlignment="Center" Foreground="#fafafa"
                                                        FontSize="20" />
-                                            <CheckBox IsChecked="True" MinWidth="0" Name="CheckboxSPPTDisplayPage"
+                                            <CheckBox IsEnabled="False" IsChecked="True" MinWidth="0" Name="CheckboxSPPTDisplayPage"
                                                       Checked="CheckboxSPPTDisplayPage_IsCheckChange"
                                                       Unchecked="CheckboxSPPTDisplayPage_IsCheckChange">
                                                 显示页码
                                             </CheckBox>
-                                            <CheckBox IsChecked="True" MinWidth="0" Name="CheckboxSPPTHalfOpacity"
+                                            <CheckBox IsEnabled="False" IsChecked="True" MinWidth="0" Name="CheckboxSPPTHalfOpacity"
                                                       Checked="CheckboxSPPTHalfOpacity_IsCheckChange"
                                                       Unchecked="CheckboxSPPTHalfOpacity_IsCheckChange"
                                                       Margin="16,0,0,0">
                                                 半透明
                                             </CheckBox>
-                                            <CheckBox IsChecked="True" MinWidth="0"
+                                            <CheckBox IsEnabled="False" IsChecked="True" MinWidth="0"
                                                       Margin="16,0,0,0" Name="CheckboxSPPTBlackBackground"
                                                       Checked="CheckboxSPPTBlackBackground_IsCheckChange"
                                                       Unchecked="CheckboxSPPTBlackBackground_IsCheckChange">
@@ -933,18 +937,18 @@
                                             <TextBlock Margin="0,0,24,0" Text="左下右下" FontWeight="Bold"
                                                        VerticalAlignment="Center" Foreground="#fafafa"
                                                        FontSize="20" />
-                                            <CheckBox IsChecked="True" MinWidth="0" Name="CheckboxBPPTDisplayPage"
+                                            <CheckBox IsEnabled="False" IsChecked="True" MinWidth="0" Name="CheckboxBPPTDisplayPage"
                                                       Checked="CheckboxBPPTDisplayPage_IsCheckChange"
                                                       Unchecked="CheckboxBPPTDisplayPage_IsCheckChange">
                                                 显示页码
                                             </CheckBox>
-                                            <CheckBox IsChecked="True" MinWidth="0" Name="CheckboxBPPTHalfOpacity"
+                                            <CheckBox IsEnabled="False" IsChecked="True" MinWidth="0" Name="CheckboxBPPTHalfOpacity"
                                                       Checked="CheckboxBPPTHalfOpacity_IsCheckChange"
                                                       Unchecked="CheckboxBPPTHalfOpacity_IsCheckChange"
                                                       Margin="16,0,0,0">
                                                 半透明
                                             </CheckBox>
-                                            <CheckBox IsChecked="True" MinWidth="0" Name="CheckboxBPPTBlackBackground"
+                                            <CheckBox IsEnabled="False" IsChecked="True" MinWidth="0" Name="CheckboxBPPTBlackBackground"
                                                       Checked="CheckboxBPPTBlackBackground_IsCheckChange"
                                                       Unchecked="CheckboxBPPTBlackBackground_IsCheckChange"
                                                       Margin="16,0,0,0">
@@ -955,7 +959,7 @@
                                                              HorizontalAlignment="Left">
                                             <TextBlock Foreground="#fafafa" Text="PPT 页码按钮可点击"
                                                        VerticalAlignment="Center" FontSize="14" Margin="0,0,16,0" />
-                                            <ui:ToggleSwitch OnContent="" OffContent=""
+                                            <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent=""
                                                              Name="ToggleSwitchEnablePPTButtonPageClickable"
                                                              IsOn="True"
                                                              FontFamily="Microsoft YaHei UI" FontWeight="Bold"
@@ -971,7 +975,7 @@
                                                          Orientation="Horizontal" HorizontalAlignment="Left">
                                         <TextBlock Foreground="#fafafa" Text="进入 PPT 放映时自动进入批注模式"
                                                    VerticalAlignment="Center" FontSize="14" Margin="0,0,16,0" />
-                                        <ui:ToggleSwitch OnContent="" OffContent=""
+                                        <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent=""
                                                          Name="ToggleSwitchShowCanvasAtNewSlideShow" IsOn="True"
                                                          FontFamily="Microsoft YaHei UI" FontWeight="Bold"
                                                          Toggled="ToggleSwitchShowCanvasAtNewSlideShow_Toggled" />
@@ -999,7 +1003,7 @@
                                     <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                         <TextBlock Foreground="#fafafa" Text="允许幻灯片模式下的双指手势" VerticalAlignment="Center"
                                                    FontSize="14" Margin="0,0,16,0" />
-                                        <ui:ToggleSwitch OnContent="" OffContent=""
+                                        <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent=""
                                                          Name="ToggleSwitchEnableTwoFingerGestureInPresentationMode"
                                                          IsOn="True" FontFamily="Microsoft YaHei UI" FontWeight="Bold"
                                                          Toggled="ToggleSwitchEnableTwoFingerGestureInPresentationMode_Toggled" />
@@ -1007,7 +1011,7 @@
                                     <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                         <TextBlock Foreground="#fafafa" Text="允许使用手指手势进行幻灯片翻页"
                                                    VerticalAlignment="Center" FontSize="14" Margin="0,0,16,0" />
-                                        <ui:ToggleSwitch OnContent="" OffContent=""
+                                        <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent=""
                                                          Name="ToggleSwitchEnableFingerGestureSlideShowControl"
                                                          IsOn="True" FontFamily="Microsoft YaHei UI" FontWeight="Bold"
                                                          Toggled="ToggleSwitchEnableFingerGestureSlideShowControl_Toggled" />
@@ -1020,7 +1024,7 @@
                                     <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                         <TextBlock Foreground="#fafafa" Text="自动幻灯片截屏" VerticalAlignment="Center"
                                                    FontSize="14" Margin="0,0,16,0" />
-                                        <ui:ToggleSwitch OnContent="" OffContent=""
+                                        <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent=""
                                                          Name="ToggleSwitchAutoSaveScreenShotInPowerPoint" IsOn="True"
                                                          FontFamily="Microsoft YaHei UI" FontWeight="Bold"
                                                          Toggled="ToggleSwitchAutoSaveScreenShotInPowerPoint_Toggled" />
@@ -1030,7 +1034,7 @@
                                     <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                         <TextBlock Foreground="#fafafa" Text="自动保存幻灯片墨迹" VerticalAlignment="Center"
                                                    FontSize="14" Margin="0,0,16,0" />
-                                        <ui:ToggleSwitch OnContent="" OffContent=""
+                                        <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent=""
                                                          Name="ToggleSwitchAutoSaveStrokesInPowerPoint" IsOn="True"
                                                          FontFamily="Microsoft YaHei UI" FontWeight="Bold"
                                                          Toggled="ToggleSwitchAutoSaveStrokesInPowerPoint_Toggled" />
@@ -1042,7 +1046,7 @@
                                     <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                         <TextBlock Foreground="#fafafa" Text="记忆并提示上次播放位置" VerticalAlignment="Center"
                                                    FontSize="14" Margin="0,0,16,0" />
-                                        <ui:ToggleSwitch OnContent="" OffContent=""
+                                        <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent=""
                                                          Name="ToggleSwitchNotifyPreviousPage" IsOn="True"
                                                          FontFamily="Microsoft YaHei UI" FontWeight="Bold"
                                                          Toggled="ToggleSwitchNotifyPreviousPage_Toggled" />
@@ -1050,14 +1054,14 @@
                                     <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                         <TextBlock Foreground="#fafafa" Text="提示隐藏幻灯片" VerticalAlignment="Center"
                                                    FontSize="14" Margin="0,0,16,0" />
-                                        <ui:ToggleSwitch OnContent="" OffContent="" Name="ToggleSwitchNotifyHiddenPage"
+                                        <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent="" Name="ToggleSwitchNotifyHiddenPage"
                                                          IsOn="True" FontFamily="Microsoft YaHei UI" FontWeight="Bold"
                                                          Toggled="ToggleSwitchNotifyHiddenPage_Toggled" />
                                     </ui:SimpleStackPanel>
                                     <ui:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                         <TextBlock Foreground="#fafafa" Text="提示是否已启用自动播放" VerticalAlignment="Center"
                                                    FontSize="14" Margin="0,0,16,0" />
-                                        <ui:ToggleSwitch OnContent="" OffContent=""
+                                        <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent=""
                                                          Name="ToggleSwitchNotifyAutoPlayPresentation" IsOn="True"
                                                          FontFamily="Microsoft YaHei UI" FontWeight="Bold"
                                                          Toggled="ToggleSwitchNotifyAutoPlayPresentation_Toggled" />
@@ -1610,7 +1614,7 @@
                                                Height="28" VerticalAlignment="Center" />
                                         <TextBlock Foreground="#fafafa" Text="播放PPT时自动收纳" VerticalAlignment="Center"
                                                    FontSize="14" Margin="0,0,16,0" />
-                                        <ui:ToggleSwitch OnContent="" OffContent="" MinWidth="0"
+                                        <ui:ToggleSwitch IsEnabled="False" OnContent="" OffContent="" MinWidth="0"
                                                          Name="ToggleSwitchAutoFoldInPPTSlideShow" IsOn="True"
                                                          FontFamily="Microsoft YaHei UI" FontWeight="Bold"
                                                          Toggled="ToggleSwitchAutoFoldInPPTSlideShow_Toggled" />
